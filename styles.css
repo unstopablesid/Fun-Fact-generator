@@ -1,30 +1,64 @@
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #000000;
 }
 
+/* Container styling */
 .container {
     text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
 }
 
+/* Button styling */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #007BFF;
-    color: white;
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
+}
+
+/* Button focus state */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76,175,80,0.5);
+}
+
+/* Paragraph styling for fun facts */
+#funFact {
+    font-size: 16px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Animation for displaying fun facts */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply animation */
+#funFact.show {
+    animation: fadeIn 1s forwards;
 }
